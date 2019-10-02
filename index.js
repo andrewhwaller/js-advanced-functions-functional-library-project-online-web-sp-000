@@ -11,8 +11,13 @@ const fi = (function() {
       return collection
     },
 
-    map: function() {
-
+    map: function(collection, element) {
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
+      const newArray = []
+      for (let index = 0; index < collection.length; index++)
+        newArray.push(element(collection[index]))
+      return newArray
     },
 
     reduce: function() {
