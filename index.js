@@ -81,7 +81,7 @@ const fi = (function() {
      for (let val of array)
        receiver.push(val)
      },
-    
+
 
 
     functions: function() {
