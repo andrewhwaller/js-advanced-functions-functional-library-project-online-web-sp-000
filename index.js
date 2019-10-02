@@ -86,7 +86,7 @@ const fi = (function() {
       if (!Array.isArray(collection)) return newArray.push(collection)
       if (shallow) {
         for (let val of collection)
-        Array.isArray(val) ? this.unpack(newArr, val) : newArray.push(val)
+        Array.isArray(val) ? this.unpack(newArray, val) : newArray.push(val)
       } else {
         for (let val of collection) {
           this.flatten(val, false, newArray)
