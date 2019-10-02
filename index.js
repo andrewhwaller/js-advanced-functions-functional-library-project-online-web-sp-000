@@ -132,7 +132,6 @@ const fi = (function() {
     },
 
     values: function(obj) {
-      // Using for loop
       const values = []
       for (let key in obj){
         values.push(obj[key])
