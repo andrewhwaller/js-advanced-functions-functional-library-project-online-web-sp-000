@@ -138,10 +138,6 @@ const fi = (function() {
         values.push(obj[key])
       }
       return values
-
-      // Using the custom 'map' method from above
-      // return this.map(obj, (value) => value)
-
     },
 
     functions: function(obj) {
