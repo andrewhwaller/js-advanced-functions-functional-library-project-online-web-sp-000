@@ -95,7 +95,7 @@ const fi = (function() {
       return newArray
     },
 
-    uniqSorted: function(collection, iteratee) {
+    uniqSorted: function(collection, element) {
       const sorted = [collection[0]]
       for (let idx = 1; idx < collection.length; idx++) {
         if (sorted[idx-1] !== collection[idx])
