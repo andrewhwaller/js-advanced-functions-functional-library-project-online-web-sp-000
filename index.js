@@ -131,18 +131,18 @@ const fi = (function() {
       return keys
     },
 
-    values: function(obj) {
+    values: function(object) {
       const values = []
-      for (let key in obj){
-          values.push(obj[key])
+      for (let key in object){
+          values.push(object[key])
       }
       return values
     },
 
-    functions: function(obj) {
+    functions: function(object) {
       const functionNames = []
-      for (let key in obj) {\
-        if (typeof obj[key] === "function"){
+      for (let key in object) {\
+        if (typeof object[key] === "function"){
           functionNames.push(key)
         }
       }
