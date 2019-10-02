@@ -36,7 +36,7 @@ const fi = (function() {
     find: function(collection, predicate) {
       if (!(collection instanceof Array))
         collection = Object.values(collection)
-      for (let idx = 0; idx < collection.length; idx++)
+      for (let index = 0; index < collection.length; index++)
         if (predicate(collection[idx])) return collection[idx]
     return undefined
     },
