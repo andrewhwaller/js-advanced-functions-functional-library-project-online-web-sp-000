@@ -131,21 +131,28 @@ const fi = (function() {
       return keys
     },
 
-    values: function(object) {
+    values: function(obj) {
+      // Using for loop
       const values = []
-      for (let key in object){
-          values.push(object[key])
+      for (let key in obj){
+        values.push(obj[key])
       }
       return values
+
+      // Using the custom 'map' method from above
+      // return this.map(obj, (value) => value)
+
     },
 
-    functions: function(object) {
+    functions: function(obj) {
       const functionNames = []
-      for (let key in object) {\
-        if (typeof object[key] === "function"){
+
+      for (let key in obj) {
+        if (typeof obj[key] === "function"){
           functionNames.push(key)
         }
       }
+
       return functionNames.sort()
     },
 
