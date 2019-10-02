@@ -77,6 +77,12 @@ const fi = (function() {
       })
     },
 
+    unpack: function(receiver, array) {
+     for (let val of array)
+       receiver.push(val)
+     },
+    
+
 
     functions: function() {
 
