@@ -42,16 +42,16 @@ const fi = (function() {
     },
 
     filter: function(collection, predicate) {
-  if (!(collection instanceof Array))
-    collection = Object.values(collection)
+      if (!(collection instanceof Array))
+        collection = Object.values(collection)
 
-  const newArr = []
+      const newArray = []
 
-  for (let idx = 0; idx < collection.length; idx++)
-    if (predicate(collection[idx])) newArr.push(collection[idx])
+      for (let index = 0; index < collection.length; index++)
+        if (predicate(collection[index])) newArray.push(collection[index])
 
-  return newArr
-},
+      return newArray
+    },
 
 
     functions: function() {
