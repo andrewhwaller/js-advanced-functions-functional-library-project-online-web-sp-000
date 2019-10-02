@@ -67,7 +67,7 @@ const fi = (function() {
 
     compact: function(collection) {
       const badBad = new Set([false, null, 0, "", undefined, NaN])
-      return collection.filter(el => !badBad.has(el))
+      return collection.filter(element => !badBad.has(element))
     },
 
     sortBy: function(collection, callback) {
