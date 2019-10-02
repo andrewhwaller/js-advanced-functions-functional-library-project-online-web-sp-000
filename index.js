@@ -131,23 +131,7 @@ const fi = (function() {
       return keys
     },
 
-    values: function(object) {
-      const values = []
-      for (let key in object){
-          values.push(object[key])
-      }
-      return values
-    },
-
-    functions: function(object) {
-      const functionNames = []
-      for (let key in object) {\
-        if (typeof object[key] === "function"){
-          functionNames.push(key)
-        }
-      }
-      return functionNames.sort()
-    },
+    
 
 
   }
