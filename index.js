@@ -132,10 +132,30 @@ const fi = (function() {
     },
 
 
-
-    functions: function() {
-
-    },
+    values: function(obj) {
+          // Using for loop
+          const values = []
+          for (let key in obj){
+            values.push(obj[key])
+          }
+          return values
+    
+          // Using the custom 'map' method from above
+          // return this.map(obj, (value) => value)
+    
+        },
+    
+        functions: function(obj) {
+          const functionNames = []
+    
+          for (let key in obj) {
+            if (typeof obj[key] === "function"){
+              functionNames.push(key)
+            }
+          }
+    
+          return functionNames.sort()
+        },
 
 
   }
