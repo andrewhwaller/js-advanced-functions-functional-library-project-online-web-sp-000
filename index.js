@@ -104,16 +104,16 @@ const fi = (function() {
       return sorted
     },
 
-    uniq: function(collection, sorted=false, iteratee=false) {
+    uniq: function(collection, sorted=false, element=false) {
       if (sorted) {
-        return fi.uniqSorted(collection, iteratee)
-      } else if (!iteratee) {
+        return fi.uniqSorted(collection, element)
+      } else if (!element) {
         return Array.from(new Set(collection))
       } else {
         const modifiedVals = new Set()
         const uniqVals = new Set()
         for (let val of collection) {
-          const moddedVal = iteratee(val)
+          const moddedVal = element(val)
           if (!modifiedVals.has(moddedVal)) {
             modifiedVals.add(moddedVal)
             uniqVals.add(val)
