@@ -65,6 +65,18 @@ const fi = (function() {
       return (start) ? collection.slice(collection.length-start, collection.length) : collection[collection.length-1]
     },
 
+    compact: function(collection) {
+      const badBad = new Set([false, null, 0, "", undefined, NaN])
+      return collection.filter(el => !badBad.has(el))
+    },
+
+    sortBy: function(collection, callback) {
+      const newArray = [...collection]
+      return newArray.sort(function(a, b) {
+        return callback(a) - callback(b)
+      })
+    },
+
 
     functions: function() {
 
