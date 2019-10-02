@@ -20,8 +20,17 @@ const fi = (function() {
       return newArray
     },
 
-    reduce: function() {
-
+    reduce: function(c = [], callback = () => {}, acc) {
+      let collection = c.slice(0)
+      if (!acc) {
+        acc = collection[0]
+        collection = collection.slice(1)
+      }
+      let collectionLength = collection.length;
+      for (let i = 0; i < collectionLength; i++) {
+        acc = callback(acc, collection[i], collection)
+      }
+      return acc;
     },
 
     functions: function() {
