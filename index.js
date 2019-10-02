@@ -123,10 +123,9 @@ const fi = (function() {
       }
     },
 
-    keys: function(obj) {
-      // Using for loop
+    keys: function(object) {
       const keys = []
-      for (let key in obj){
+      for (let key in object){
         keys.push(key)
       }
       return keys
