@@ -97,9 +97,9 @@ const fi = (function() {
 
     uniqSorted: function(collection, element) {
       const sorted = [collection[0]]
-      for (let idx = 1; idx < collection.length; idx++) {
-        if (sorted[idx-1] !== collection[idx])
-          sorted.push(collection[idx])
+      for (let index = 1; index < collection.length; index++) {
+        if (sorted[index-1] !== collection[index])
+          sorted.push(collection[index])
       }
       return sorted
     },
