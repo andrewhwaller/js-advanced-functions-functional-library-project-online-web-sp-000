@@ -131,10 +131,10 @@ const fi = (function() {
       return keys
     },
 
-    values: function(obj) {
+    values: function(object) {
       const values = []
-      for (let key in obj){
-        values.push(obj[key])
+      for (let key in object){
+        values.push(object[key])
       }
       return values
     },
